@@ -6,6 +6,7 @@ document.getElementById("csdk-logout").addEventListener('click', handleCsdkLogou
 AdobeCreativeSDK.init({
     /* 2) Add your Client ID (API Key) */
     clientID: "90c2d77d35434ba6a78e34a533708943",
+    API: ["Asset"],
     onError: function(error) {
         /* 3) Handle any global or config errors */
         if (error.type === AdobeCreativeSDK.ErrorTypes.AUTHENTICATION) {
