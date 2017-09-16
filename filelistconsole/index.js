@@ -39,7 +39,7 @@ function handleCsdkLogin() {
             console.log('Logged in!');
             /* 1) Make a params object to pass to Creative Cloud */
             var params = {
-                path: "/files" // defaults to root if not set
+                path: "" // defaults to root if not set
             }
 
             /* 2) Request an array of assets from Creative Cloud */
