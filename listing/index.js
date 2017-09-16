@@ -26,6 +26,40 @@ AdobeCreativeSDK.init({
     }
 });
 
+/* 2) Make a helper function */
+function handleCsdkLogin() {
+
+    /* 3) Get auth status */
+    AdobeCreativeSDK.getAuthStatus(function(csdkAuth) {
+
+        /* 4) Handle auth based on status */
+        if (csdkAuth.isAuthorized) {
+            // The user is logged in and has authorized your site. 
+            console.log('Logged in!');
+        } else {
+            // Trigger a login
+            AdobeCreativeSDK.login(handleCsdkLogin);
+        }
+    });
+}
+
+/* 2) Make a helper function */
+function handleCsdkLogout() {
+
+    /* 3) Get auth status */
+    AdobeCreativeSDK.getAuthStatus(function(csdkAuth) {
+
+        /* 4) Handle auth based on status */
+        if (csdkAuth.isAuthorized) {
+            AdobeCreativeSDK.logout();
+            console.log('Logged out!');
+        } else {
+            console.log('Not logged in!');
+        }
+
+    });
+}
+
 function handleAuth(auth) {
             if (auth.isAuthorized) {
                 // The user is logged in and has authorized your site. You may launch the Asset Browser now.
