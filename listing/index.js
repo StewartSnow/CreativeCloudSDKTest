@@ -31,6 +31,7 @@ function handleAuth(auth) {
                 console.log('Logged In!');
             } else {
                 // Else, trigger a login
+                console.log('not logged in so trying');
                 AdobeCreativeSDK.login(handleAuth);
             }
         }
