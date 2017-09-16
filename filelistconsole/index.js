@@ -39,7 +39,7 @@ function handleCsdkLogin() {
             /* 1) Make a params object to pass to Creative Cloud */
             var params = {
                 //path: "/files/My CSDK App test" // defaults to root if not set
-            }
+            };
 
             /* 2) Request an array of assets from Creative Cloud */
             AdobeCreativeSDK.API.Files.getAssets(params, function(result) {
