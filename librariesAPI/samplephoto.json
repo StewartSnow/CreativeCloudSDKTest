@@ -1,0 +1,40 @@
+[Log] Array (37)
+0 t
+
+assetSubType: 2
+
+assetType: 2
+
+catalogId: "ad851cf80068498f9815a5b3b293da79"
+
+collectionId: "bc690cc645fbe164a793b63fae8b0815"
+
+contentType: "image/jpeg"
+
+creationDate: "2015-04-03T22:02:25.960041Z"
+
+etag: null
+
+fullPath: "https://photo-api.adobe.io//v1.0/catalogs/ad851cf80068498f9815a5b3b293da79/assets/1edb743bac607a6b034fd93000eb6706/revisions/4a6ad6bf6c6c4e9…"
+
+id: "1edb743bac607a6b034fd93000eb6706"
+
+internalId: "urn:carousel:catalog:ad851cf80068498f9815a5b3b293da79:asset:1edb743bac607a6b034fd93000eb6706"
+
+isCollection: false
+
+latestRevision: "/v1.0/catalogs/ad851cf80068498f9815a5b3b293da79/assets/1edb743bac607a6b034fd93000eb6706/revisions/4117f5e79ec5a14f0c162aeb3d698388"
+
+metadata: {changedAtTime: "2015-04-03T22:46:26.305+01:00", captureDate: "2014-02-13T19:37:56", changedOnDevice: "Stewart’s iMac", importSource: Object, develop: Object, …}
+
+modificationDate: "2017-08-20T09:38:39.398580Z"
+
+name: "2014_02_13_19_37_56.jpg"
+
+parentPath: null
+
+path: "/v1.0/catalogs/ad851cf80068498f9815a5b3b293da79/albums/bc690cc645fbe164a793b63fae8b0815/assets/1edb743bac607a6b034fd93000eb6706"
+
+renditions: {2048: "/v1.0/catalogs/ad851cf80068498f9815a5b3b293da79/as…8ee73/renditions/ec6ec2f5ba5545c4959a7ea0433e7753", thumbnail2x: "/v1.0/catalogs/ad851cf80068498f9815a5b3b293da79/as…53d4c/renditions/9f1f03558fa8f43e7ed368e1320e5224"}
+
+size: 1436564
