@@ -1,4 +1,6 @@
-
+/* 1) Add click handlers to call your helper functions */
+document.getElementById("csdk-login").addEventListener('click', handleCsdkLogin, false);
+document.getElementById("csdk-logout").addEventListener('click', handleCsdkLogout, false);
 
 /* 1) Initialize the AdobeCreativeSDK object */
 AdobeCreativeSDK.init({
