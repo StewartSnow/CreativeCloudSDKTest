@@ -18,7 +18,7 @@
       <title>Balloons</title>
    <description>Sample Media RSS Item 2</description>
    <media:content
-      url = "http://server/image2.jpg"
+      url = "https://stewartsnow.github.io/CreativeCloudSDKTest/mrsstest/2.jpg"
       type = "image/jpeg"
       medium = "image"
       duration = "10">
@@ -28,7 +28,7 @@
       <title>Stream</title>
    <description>Sample Media RSS Item 3</description>
    <media:content
-      url = "http://server/image3.jpg"
+      url = "https://stewartsnow.github.io/CreativeCloudSDKTest/mrsstest/BLG_Andrew-G.-River-Sample_09.13.12.png"
       type = "image/jpeg"
       medium = "image"
       duration = "10">
