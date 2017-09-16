@@ -39,7 +39,7 @@ function handleCsdkLogin() {
             /* 1) Make a params object to pass to Creative Cloud */
             var params = {
                 path: "/" // defaults to root if not set
-            };
+            }
 
             /* 2) Request an array of assets from Creative Cloud */
             AdobeCreativeSDK.API.Files.getAssets(params, function(result) {
@@ -50,6 +50,7 @@ function handleCsdkLogin() {
 
                 // Success, an array of assets
                 console.log(result.data);
+            });
         } else {
             // Trigger a login
             console.log('Not Logged in!');
