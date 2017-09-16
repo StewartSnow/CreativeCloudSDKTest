@@ -76,53 +76,7 @@ function handleCsdkLogout() {
     });
 }
 
-function handleAuth(auth) {
-            if (auth.isAuthorized) {
-                // The user is logged in and has authorized your site. You may launch the Asset Browser now.
-                launchAssetBrowser();
-                console.log('Logged In!');
-            } else {
-                // Else, trigger a login
-                console.log('not logged in so trying');
-                AdobeCreativeSDK.login(handleAuth);
-            }
-        }
 
-        AdobeCreativeSDK.getAuthStatus(handleAuth);
-
-        function launchAssetBrowser() {
-            var assetBrowser = new AdobeCreativeSDK.UI.AssetBrowser({
-                // openType: 'embed', // options include: embed, lightbox and window. Default is lightbox
-                // element: 'domid', // use the element parameter parameter when specifying the "embed" openType
-                onOpen: function() {
-                    // asset browser launched
-                },
-                onClose: function() {
-                    // asset browser closed
-                },
-                onError: function() {
-                    // a launch error occured
-                }
-            });
-
-            assetBrowser.open({
-                multiSelect: true, // allow the user to select multiple assets
-            }, function(response) {
-                if (response.error) {
-                    console.log('Something went wrong...')
-                } else {
-                    // response.data is an array of Creative Cloud Assets
-                    getRendition(response.data[0], function(res) {
-                        if (res.error) {
-                            console.log('Something went wrong...')
-                        } else {
-                            // data contains a base64 encoded string representing the image
-                            console.log(res.data)
-                        }
-                    });
-                }
-            });
-        }
 
         function getRendition(asset, callback) {
             var assetType = AdobeCreativeSDK.Constants.Asset.RenditionType.PNG;
