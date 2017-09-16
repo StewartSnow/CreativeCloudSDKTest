@@ -1,7 +1,7 @@
 /* 1) Initialize the AdobeCreativeSDK object */
 AdobeCreativeSDK.init({
     /* 2) Add your Client ID (API Key) */
-    clientID: CONFIG.CSDK_CLIENT_ID,
+    clientID: "90c2d77d35434ba6a78e34a533708943",
     onError: function(error) {
         /* 3) Handle any global or config errors */
         if (error.type === AdobeCreativeSDK.ErrorTypes.AUTHENTICATION) { 
