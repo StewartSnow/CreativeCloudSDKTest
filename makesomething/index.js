@@ -99,7 +99,13 @@ function ListPhotos(collectionId, nextPageUrl)
   AdobeCreativeSDK.API.Photos.getPhotos(params,
     function(result)
     {
-      result.data.forEach(printPhoto);
+      var stars = result.data.filter(
+        function el(pic)
+        {
+          return pic.metadata.ratings;
+        });
+
+      stars.forEach(printPhoto);
       if (result.nextPageUrl)
       {
         ListPhotos(result.nextPageUrl);
@@ -108,6 +114,9 @@ function ListPhotos(collectionId, nextPageUrl)
     }
   );
 }
+
+
+
 
 function printCollection(col)
 {
