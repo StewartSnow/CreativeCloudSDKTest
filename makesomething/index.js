@@ -66,33 +66,58 @@ function handleCsdkLogout() {
 
 function ListCollections(nextPageUrl)
 {
-  console.log('next url - ' + nextPageUrl);
+  console.log('next collection url - ' + nextPageUrl);
   /* 1) Make a params object to pass to Creative Cloud */
   var params = {
       catalogId: "ad851cf80068498f9815a5b3b293da79",
       nextPageUrl: nextPageUrl // defaults to root if not set
   };
 
-AdobeCreativeSDK.API.Photos.getCollections(params,
-  function(result)
-  {
-
-
-
-    result.data.forEach(printCollection);
-    if (result.nextPageUrl)
+  AdobeCreativeSDK.API.Photos.getCollections(params,
+    function(result)
     {
-      ListCollections(result.nextPageUrl);
+      result.data.forEach(printCollection);
+      if (result.nextPageUrl)
+      {
+        ListCollections(result.nextPageUrl);
+      }
+
     }
+  );
+}
 
-  }
-);
+function ListPhotos(collectionId, nextPageUrl)
+{
+  console.log('next photos url - ' + nextPageUrl);
 
+  var params = {
+      catalogId: "ad851cf80068498f9815a5b3b293da79",
+      collectionId: collectionId,
+      nextPageUrl: nextPageUrl // defaults to root if not set
+  };
+
+  AdobeCreativeSDK.API.Photos.getPhotos(params,
+    function(result)
+    {
+      result.data.forEach(printPhoto);
+      if (result.nextPageUrl)
+      {
+        ListCollections(result.nextPageUrl);
+      }
+
+    }
+  );
 }
 
 function printCollection(col)
 {
   console.log('Collection - ' + col.id + col.name);
+  ListPhotos(col.id);
+}
+
+function printPhoto(pic)
+{
+  console.log('Photo - ' + pic.id + pic.name);
 }
 
 
