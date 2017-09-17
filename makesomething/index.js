@@ -102,7 +102,7 @@ function ListPhotos(collectionId, nextPageUrl)
       result.data.forEach(printPhoto);
       if (result.nextPageUrl)
       {
-        ListCollections(result.nextPageUrl);
+        ListPhotos(result.nextPageUrl);
       }
 
     }
