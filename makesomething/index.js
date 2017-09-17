@@ -82,7 +82,7 @@ AdobeCreativeSDK.API.Photos.getCollections(params,
 
 function printCollection(col)
 {
-  console.log('Collection - ${col.id} - ${col.name}');
+  console.log('Collection - ' + col.id + col.name);
 }
 
 
