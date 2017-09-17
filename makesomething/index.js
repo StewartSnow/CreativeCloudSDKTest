@@ -74,13 +74,15 @@ function ListCollections()
 AdobeCreativeSDK.API.Photos.getCollections(params,
   function(result)
   {
-    for each (var collection in result.data)
-    {
-      console.log('Collection - ${collection.id} - ${collection.name}');
-    }
+    result.data.forEach(printCollection);
   }
 );
 
+}
+
+function printCollection(col)
+{
+  console.log('Collection - ${col.id} - ${col.name}');
 }
 
 
