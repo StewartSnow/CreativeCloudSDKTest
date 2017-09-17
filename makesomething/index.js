@@ -126,11 +126,15 @@ function printCollection(col)
 
 function printPhoto(pic)
 {
+  // this is because we have pic.metadata.ratings.{randomguid}.rating
   var rating = pic.metadata.ratings;
   var keys = Object.keys(rating);
   var prop = rating[keys[0]];
+  if (prop.rating > 2)
+  {
+    console.log('Photo - ' + pic.id + pic.name + ' rating - ' + prop.rating);
+  }
 
-  console.log('Photo - ' + pic.id + pic.name + ' rating - ' + prop.rating);
 }
 
 
