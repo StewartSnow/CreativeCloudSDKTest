@@ -64,19 +64,27 @@ function handleCsdkLogout() {
 }
 
 
-function ListCollections()
+function ListCollections(nextPageUrl)
 {
+  console.log('next url - ' + nextPageUrl);
   /* 1) Make a params object to pass to Creative Cloud */
   var params = {
-      catalogId: "ad851cf80068498f9815a5b3b293da79" // defaults to root if not set
+      catalogId: "ad851cf80068498f9815a5b3b293da79",
+      nextPageUrl: nextPageUrl // defaults to root if not set
   };
 
 AdobeCreativeSDK.API.Photos.getCollections(params,
   function(result)
   {
-    console.log(result);
-    
+
+
+
     result.data.forEach(printCollection);
+    if (result.nextPageUrl)
+    {
+      ListCollections(result.nextPageUrl);
+    }
+
   }
 );
 
