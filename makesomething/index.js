@@ -74,6 +74,8 @@ function ListCollections()
 AdobeCreativeSDK.API.Photos.getCollections(params,
   function(result)
   {
+    console.log(result);
+    
     result.data.forEach(printCollection);
   }
 );
