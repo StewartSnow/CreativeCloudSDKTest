@@ -126,7 +126,11 @@ function printCollection(col)
 
 function printPhoto(pic)
 {
-  console.log('Photo - ' + pic.id + pic.name);
+  var rating = pic.metadata.ratings;
+  var keys = Object.keys(rating);
+  var prop = rating[keys[0]];
+
+  console.log('Photo - ' + pic.id + pic.name + ' rating - ' + prop.rating);
 }
 
 
